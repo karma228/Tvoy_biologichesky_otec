@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Твой биологический отец - магазин гитар</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="img/logo/logo.png"
+            alt="Твой биологический отец - логотип"
+            width="80"
+          />
+        </a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#products">Гитары</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="btn btn-primary">Купить</button>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="video-background">
+          <video autoplay muted loop playsinline>
+            <source src="img/video/pantera.mp4" type="video/mp4" />
+            <img src="img/video/pantera.mp4" alt="Фоновое изображение" />
+          </video>
+          <div class="video-overlay"></div>
+        </div>
+        <div class="container">
+          <h1>Твой биологический отец</h1>
+          <p class="subtitle">Лучшие гитары для настоящих музыкантов</p>
+          <button class="btn btn-large">Выбрать гитару</button>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about-content">
+            <h2>О нашем магазине</h2>
+            <p>
+              Мы - семейный магазин гитар с 20-летним опытом. Наши инструменты
+              выбирают как начинающие музыканты, так и профессиональные
+              исполнители. Каждая гитара проходит тщательную проверку перед
+              продажей.
+            </p>
+            <p>
+              Мы сотрудничаем напрямую с лучшими производителями, поэтому можем
+              предложить отличные цены без посредников.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="img/interier/shop interier.jpg"
+              alt="Интерьер нашего магазина"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="products">
+        <div class="container">
+          <h2>Наши гитары</h2>
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-guitar"></i>
+              </div>
+              <h3>Акустические гитары</h3>
+              <p>
+                Классические и вестерн модели из качественной древесины с
+                насыщенным звучанием.
+              </p>
+              <a href="acoustic.html" class="btn btn-outline">Подробнее</a>
+            </div>
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3>Электрогитары</h3>
+              <p>
+                Легендарные модели для рока, блюза и джаза с фирменным звуком.
+              </p>
+              <a href="electric.html" class="btn btn-outline">Подробнее</a>
+            </div>
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-sliders-h"></i>
+              </div>
+              <h3>Бас-гитары</h3>
+              <p>
+                Мощные басы для создания плотного и глубокого звучания в любой
+                группе.
+              </p>
+              <a href="bass.html" class="btn btn-outline">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Свяжитесь с нами</h2>
+          <form class="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ваше имя"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Ваш email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Ваше сообщение"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="img/logo/logo.png"
+              alt="Твой биологический отец - логотип"
+              width="70"
+            />
+          </div>
+          <div class="footer-contacts">
+            <p>
+              <i class="fas fa-map-marker-alt"></i> г. Москва, ул.
+              Крутой-музыки, 12
+            </p>
+            <p><i class="fas fa-phone"></i> +7 (908) 481-41-11</p>
+            <p><i class="fas fa-envelope"></i> emae@guitarfather.ru</p>
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-vk"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 "Твой биологический отец".</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js.js"></script>
+    <script src="legenda.js"></script>
+  </body>
+</html>
