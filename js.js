@@ -1,11 +1,11 @@
+// js.js
 document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const nav = document.querySelector(".nav");
 
   function toggleMenu() {
-    if (window.innerWidth <= 767) {
-      nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-    }
+    nav.classList.toggle("active");
+    mobileMenuBtn.classList.toggle("active");
   }
 
   mobileMenuBtn.addEventListener("click", toggleMenu);
@@ -14,38 +14,28 @@ document.addEventListener("DOMContentLoaded", function () {
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
       if (window.innerWidth <= 767) {
-        nav.style.display = "none";
+        nav.classList.remove("active");
+        mobileMenuBtn.classList.remove("active");
       }
     });
   });
 
   window.addEventListener("resize", function () {
     if (window.innerWidth > 767) {
-      nav.style.display = "flex";
-    } else {
-      nav.style.display = "none";
+      nav.classList.remove("active");
+      mobileMenuBtn.classList.remove("active");
     }
   });
-
-  if (window.innerWidth <= 767) {
-    nav.style.display = "none";
-  } else {
-    nav.style.display = "flex";
-  }
 
   const contactForm = document.querySelector(".contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
       const message = document.getElementById("message").value;
-
       console.log("Form submitted:", { name, email, message });
-
       alert("Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.");
-
       contactForm.reset();
     });
   }

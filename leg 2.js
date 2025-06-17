@@ -7,30 +7,26 @@ document.addEventListener("DOMContentLoaded", function () {
         const modal = document.getElementById("orderModal");
         modal.style.display = "block";
 
-        // Устанавливаем изображение (исправлено)
         const modalImage = document.getElementById("modalImage");
         modalImage.src = "img/legenda/legenda doom.jpg";
 
-        // Устанавливаем и воспроизводим аудио
         const modalAudio = document.getElementById("modalAudio");
         modalAudio.innerHTML =
           '<source src="sound/doom.mp3" type="audio/mpeg">';
         modalAudio.load();
 
-        // Обработка ошибки автовоспроизведения
         modalAudio
           .play()
           .then(() => console.log("Аудио воспроизводится"))
           .catch((e) => {
             console.log("Автовоспроизведение запрещено:", e);
-            // Показываем кнопку воспроизведения
+
             modalAudio.controls = true;
           });
       });
     }
   });
 
-  // Закрытие модального окна
   const closeModalElements = document.querySelectorAll(
     ".close-modal, #orderModal"
   );
