@@ -20,6 +20,7 @@
             width="80"
           />
         </a>
+
         <nav class="nav">
           <ul class="nav-list">
             <li><a href="index.html#about">О нас</a></li>
@@ -27,10 +28,13 @@
             <li><a href="index.html#contact">Контакты</a></li>
           </ul>
         </nav>
-        <button class="btn btn-primary">Купить</button>
-        <button class="mobile-menu-btn">
-          <i class="fas fa-bars"></i>
-        </button>
+
+        <div class="header-actions">
+          <button class="btn btn-primary">Купить</button>
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -116,5 +120,28 @@
     </footer>
     <script src="js.js"></script>
     <script src="legenda.js"></script>
+    <script src="leg 2.js"></script>
+
+    <div id="orderModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          id="modalImage"
+          src=""
+          alt="Специальное предложение"
+          style="max-width: 100%"
+        />
+        <audio
+          id="modalAudio"
+          controls
+          autoplay
+          style="width: 100%; margin-top: 20px"
+        >
+          Ваш браузер не поддерживает аудио элемент.
+        </audio>
+        <h3>Спасибо за заказ!</h3>
+        <p>Наш менеджер свяжется с вами в ближайшее время.</p>
+      </div>
+    </div>
   </body>
 </html>

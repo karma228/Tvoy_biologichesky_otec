@@ -2,9 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const nav = document.querySelector(".nav");
 
-  mobileMenuBtn.addEventListener("click", function () {
-    nav.style.display = nav.style.display === "block" ? "none" : "block";
-  });
+  function toggleMenu() {
+    if (window.innerWidth <= 767) {
+      nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    }
+  }
+
+  mobileMenuBtn.addEventListener("click", toggleMenu);
 
   const navLinks = document.querySelectorAll(".nav-list a");
   navLinks.forEach((link) => {
@@ -14,6 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 767) {
+      nav.style.display = "flex";
+    } else {
+      nav.style.display = "none";
+    }
+  });
+
+  if (window.innerWidth <= 767) {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "flex";
+  }
 
   const contactForm = document.querySelector(".contact-form");
   if (contactForm) {
